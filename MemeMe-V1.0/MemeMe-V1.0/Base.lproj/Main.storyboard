@@ -22,22 +22,38 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzX-DX-HSf">
                                 <items>
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="qAh-Xf-uj5"/>
-                                    <barButtonItem style="plain" systemItem="action" id="CiI-PE-iyh"/>
+                                    <barButtonItem style="plain" systemItem="action" id="CiI-PE-iyh">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="MJF-ob-kzP"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EXV-oR-csD"/>
-                                    <barButtonItem style="plain" systemItem="cancel" id="e5V-de-d6D"/>
+                                    <barButtonItem style="plain" systemItem="cancel" id="e5V-de-d6D">
+                                        <connections>
+                                            <action selector="cancelButtonPressedWithSender:" destination="BYZ-38-t0r" id="P8j-jj-6fT"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Vcx-YC-gaM"/>
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUq-6F-3WX">
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6BI-2a-AJq"/>
-                                    <barButtonItem style="plain" systemItem="camera" id="8As-Qc-GWE"/>
+                                    <barButtonItem style="plain" systemItem="camera" id="8As-Qc-GWE">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="yBJ-Kh-u8T"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="qQk-Rp-PPm"/>
-                                    <barButtonItem title="Album" style="plain" id="EgA-Hy-ShP"/>
+                                    <barButtonItem title="Album" style="plain" id="EgA-Hy-ShP">
+                                        <connections>
+                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="sHr-aT-Cuy"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="55X-W4-c3x"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Om-v0-bqc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Om-v0-bqc">
                                 <color key="backgroundColor" red="0.3039015222548973" green="0.30311592087458616" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ir6-tF-Sxr">
@@ -71,6 +87,15 @@
                             <constraint firstItem="55t-3J-T7l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="soP-iA-dW0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomBar" destination="xUq-6F-3WX" id="5Tq-zs-qpq"/>
+                        <outlet property="bottomTextField" destination="55t-3J-T7l" id="Yie-dM-eGK"/>
+                        <outlet property="cameraButton" destination="8As-Qc-GWE" id="F5l-3z-jpd"/>
+                        <outlet property="imagePickerView" destination="3Om-v0-bqc" id="lyo-J5-6cU"/>
+                        <outlet property="shareButton" destination="CiI-PE-iyh" id="oSh-IF-Ghz"/>
+                        <outlet property="topBar" destination="pzX-DX-HSf" id="ueP-0R-oHn"/>
+                        <outlet property="topTextField" destination="ir6-tF-Sxr" id="8Tj-kv-ueK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
