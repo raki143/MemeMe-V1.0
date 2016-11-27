@@ -22,6 +22,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     // Bottom Bar
     @IBOutlet weak var bottomBar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var albumButton: UIBarButtonItem!
     
     var selectedTextField: UITextField!
     
@@ -185,7 +186,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad{
             
         
-                activityViewController.popoverPresentationController?.sourceView = self.view
+                activityViewController.popoverPresentationController?.barButtonItem = albumButton
             
         }
         present(activityViewController, animated: true, completion:nil)

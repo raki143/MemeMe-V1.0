@@ -88,6 +88,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="albumButton" destination="EgA-Hy-ShP" id="B4n-6t-xEX"/>
                         <outlet property="bottomBar" destination="xUq-6F-3WX" id="5Tq-zs-qpq"/>
                         <outlet property="bottomTextField" destination="55t-3J-T7l" id="Yie-dM-eGK"/>
                         <outlet property="cameraButton" destination="8As-Qc-GWE" id="F5l-3z-jpd"/>
