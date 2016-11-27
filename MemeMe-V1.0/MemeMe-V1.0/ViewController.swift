@@ -174,8 +174,23 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         let memedImage = generateMemedImage()
         
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-       present(activityViewController, animated: true, completion: {self.save(memedImage)})
         
+        activityViewController.completionWithItemsHandler = { activity,completed, items,error in
+            if completed{
+                self.save(memedImage)
+                self.cancelButtonPressed(sender: true as AnyObject)
+            }
+        }
+        
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad{
+            
+        
+                activityViewController.popoverPresentationController?.sourceView = self.view
+            
+        }
+        present(activityViewController, animated: true, completion:nil)
+
+    
     }
     
     func save(_ memedImage:UIImage){
