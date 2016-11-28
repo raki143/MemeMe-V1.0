@@ -6,6 +6,11 @@ This is the first version of MemeMe App, App that enables a user to take a pictu
 
 In order to run this app. Download the repository, open it on XCode, build & run.
 
+### Screenshots
+![alt tag](https://github.com/raki143/MemeMe-V1.0/blob/master/MemeMe-V1.0/Screenshots/Screenshot2.png)
+
+![alt tag](https://github.com/raki143/MemeMe-V1.0/blob/master/MemeMe-V1.0/Screenshots/Screenshot1.png)
+
 ### Implementation
 
 - __view controller__: This view controller consists of image viewer and two text fields. User can take a picture either cliking the camera button or choose a picture from existing album.  
