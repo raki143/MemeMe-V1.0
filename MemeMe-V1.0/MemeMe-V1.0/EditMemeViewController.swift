@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EditMemeViewController.swift
 //  MemeMe-V1.0
 //
 //  Created by Rakesh Kumar on 27/11/16.
@@ -30,7 +30,6 @@ class EditMemeViewController: UIViewController,UIImagePickerControllerDelegate,U
     override func viewDidLoad() {
         super.viewDidLoad()
         shareButton.isEnabled = false
-        cameraAvailabilityCheck()
         let textFieldsArray = [topTextField,bottomTextField]
         textFieldsConfiguration(textFields: textFieldsArray)
         
@@ -39,6 +38,7 @@ class EditMemeViewController: UIViewController,UIImagePickerControllerDelegate,U
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyBoardNotificatin()
+        cameraAvailabilityCheck()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
