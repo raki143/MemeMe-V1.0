@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
+class EditMemeViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
 
     // Meme image and text
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -79,8 +79,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     func keyBoardWillShow(_ notification:Notification){
         
-        if bottomTextField.isFirstResponder{
-            view.frame.origin.y -= getKeyBoardHeight(notification)
+        if bottomTextField.isFirstResponder && view.frame.origin.y == 0{
+            view.frame.origin.y = getKeyBoardHeight(notification) * -1
         }
     }
     
@@ -110,12 +110,13 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     // MARK: - Image Picking and delegation
     
-    @IBAction func pickAnImageFromCamera(_ sender: AnyObject) {
-        presentImagePickerType(source: UIImagePickerControllerSourceType.camera)
-    }
-    
-    @IBAction func pickAnImageFromAlbum(_ sender: AnyObject) {
-        presentImagePickerType(source: UIImagePickerControllerSourceType.photoLibrary)
+    @IBAction func pickAnImage(_ sender: UIBarButtonItem){
+        
+        if sender.tag == 1{
+            presentImagePickerType(source: .camera)
+        }else{
+            presentImagePickerType(source: .photoLibrary)
+        }
     }
     
     func presentImagePickerType(source sourceType : UIImagePickerControllerSourceType){
@@ -144,15 +145,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     // Check for camera avaialbility in device
     func cameraAvailabilityCheck()
     {
-        if (UIImagePickerController.isSourceTypeAvailable(.camera))
-        {
-            cameraButton.isEnabled = true
-        }
-        else
-        {
-            cameraButton.isEnabled = false
-        }
-        
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
     // MARK: - cancel Button Pressed
@@ -186,7 +179,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad{
             
         
-                activityViewController.popoverPresentationController?.barButtonItem = albumButton
+                activityViewController.popoverPresentationController?.barButtonItem = shareButton
             
         }
         present(activityViewController, animated: true, completion:nil)
@@ -211,8 +204,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         toolBarVisible(false)
         
         // Render view to image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawHierarchy(in:view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         

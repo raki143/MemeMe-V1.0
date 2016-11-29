@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7EC8EF351DEAD85300676092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8EF341DEAD85300676092 /* AppDelegate.swift */; };
-		7EC8EF371DEAD85300676092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8EF361DEAD85300676092 /* ViewController.swift */; };
+		7EC8EF371DEAD85300676092 /* EditMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC8EF361DEAD85300676092 /* EditMemeViewController.swift */; };
 		7EC8EF3A1DEAD85300676092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC8EF381DEAD85300676092 /* Main.storyboard */; };
 		7EC8EF3C1DEAD85300676092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC8EF3B1DEAD85300676092 /* Assets.xcassets */; };
 		7EC8EF3F1DEAD85300676092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC8EF3D1DEAD85300676092 /* LaunchScreen.storyboard */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		7EC8EF311DEAD85300676092 /* MemeMe-V1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MemeMe-V1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC8EF341DEAD85300676092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EC8EF361DEAD85300676092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EC8EF361DEAD85300676092 /* EditMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemeViewController.swift; sourceTree = "<group>"; };
 		7EC8EF391DEAD85300676092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EC8EF3B1DEAD85300676092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC8EF3E1DEAD85300676092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				7EC8EF341DEAD85300676092 /* AppDelegate.swift */,
-				7EC8EF361DEAD85300676092 /* ViewController.swift */,
+				7EC8EF361DEAD85300676092 /* EditMemeViewController.swift */,
 				7EC8EF381DEAD85300676092 /* Main.storyboard */,
 				7EC8EF3B1DEAD85300676092 /* Assets.xcassets */,
 				7EC8EF3D1DEAD85300676092 /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EC8EF371DEAD85300676092 /* ViewController.swift in Sources */,
+				7EC8EF371DEAD85300676092 /* EditMemeViewController.swift in Sources */,
 				7EC8EF471DEB46F200676092 /* MemeModel.swift in Sources */,
 				7EC8EF351DEAD85300676092 /* AppDelegate.swift in Sources */,
 			);
@@ -264,9 +264,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MemeMe-V1.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rakesh.MemeMe-V1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rakesh.MemeMe-V1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -276,9 +278,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MemeMe-V1.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rakesh.MemeMe-V1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rakesh.MemeMe-V1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
